@@ -17,7 +17,5 @@
     npx sv create "$out" --template minimal --types ts --no-add-ons --no-install
     cd "$out"
     npx sv add prettier eslint tailwind --tailwindcss none --sveltekit-adapter vercel   
-    # npm install
-    # git init && git add -A && git commit -m "Initial commit"
   '';
 }
