@@ -5,17 +5,17 @@
     # Note, this is NOT the list of packages available to the workspace once
     # it's created. Those go in .idx/dev.nix
     pkgs.nodejs_20
-    pkgs.python312
-    pkgs.python312Packages.pip
-    pkgs.python312Packages.pipx
-    pkgs.gcc
-    pkgs.stdenv.cc.cc.lib
+    # pkgs.python312
+    # pkgs.python312Packages.pip
+    # pkgs.python312Packages.pipx
+    # pkgs.gcc
+    # pkgs.stdenv.cc.cc.lib
   ];
 
   # Sets environment variables in the workspace
   env = {
         # GEMINI_API_KEY="{YOUR API KEY}";
-        LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
+        # LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
   };
 
   idx = {
@@ -42,7 +42,7 @@
       onCreate = {
         # Example: install JS dependencies from NPM
         npm-install = "npm install";
-        install-aider-chat = "pipx install aider-chat";
+        # install-aider-chat = "pipx install aider-chat";
         # run-aider-chat = "pipx run aider-chat";
         # Open editors for the following files by default, if they exist:
         # default.openFiles = [ ".idx/dev.nix" "README.md" ];
@@ -63,7 +63,7 @@
     npx sv create "$out" --template minimal --types ts --no-add-ons --no-install
     cd "$out"
     npx sv add prettier eslint tailwind --tailwindcss none --sveltekit-adapter vercel   
-    npm install
+    # npm install
     git init && git add -A && git commit -m "Initial commit"
 
     # Copy the folder containing the `idx-template` files to the final
