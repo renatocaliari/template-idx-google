@@ -27,7 +27,7 @@
       "Blackboxapp.blackbox"
     ];
 
-  previews = {
+    previews = {
       enable = true;
       previews = {
         web = {
@@ -37,7 +37,6 @@
       };
     };
 
- # Workspace lifecycle hooks
     workspace = {
       # Runs when a workspace is first created
       onCreate = {
@@ -56,6 +55,7 @@
         # run-aider-chat = "pipx run aider-chat";
       };
     };
+  };
 
 # Shell script that produces the final environment
   bootstrap = ''
