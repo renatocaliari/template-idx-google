@@ -6,19 +6,7 @@
   # Use https://search.nixos.org/packages to find packages
   packages = [
     pkgs.nodejs
-    # pkgs.python312
-    # pkgs.python312Packages.pip
-    # pkgs.python312Packages.pipx
-    # pkgs.gcc
-    # pkgs.stdenv.cc.cc.lib
   ];
-  
-  
-  # Sets environment variables in the workspace
-  # env = {
-        # GEMINI_API_KEY="{YOUR API KEY}";
-        # LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
-  # };
 
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
@@ -55,6 +43,8 @@
       onCreate = {
         # Example: install JS dependencies from NPM
         npm-install = "npm install";
+        git-init = "git init && git add -A && git commit -m 'Initial commit'"
+
         # Open editors for the following files by default, if they exist:
         default.openFiles = [ "README.md" ];
       };
