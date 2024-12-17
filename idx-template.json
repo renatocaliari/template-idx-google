@@ -3,16 +3,5 @@
   "description": "A template with plugins",
   "icon": "https://www.gstatic.com/images/branding/productlogos/idx/v1/192px.svg",
   "params": [
-    {
-      "id": "language",
-      "name": "Programming Language",
-      "type": "enum",
-      "default": "ts",
-      "options": {
-        "js": "JavaScript",
-        "ts": "TypeScript"
-      },
-      "required": true
-    }
   ]
 }
